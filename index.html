@@ -20,16 +20,15 @@ tw-story {
     to bottom, 
     #001f3f, 
     #003f7f
-  ); /* Fallback for the entire page if split is unsupported */
+  ); /* Fallback */
   
-  background-blend-mode: normal; /* Ensure both gradients blend correctly */
+  background-blend-mode: normal; 
   color: white; /* White text for readability */
   font-family: 'Arial', sans-serif; /* Clean, readable font */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add some depth to the text */
   padding: 20px; /* Add some space around the content */
 }
 
-/* Style for positioning the "This is the main page" text at the top */
 .topText {
   position: absolute;
   top: 230px; /* Adjust this value to set how close the text is to the top */
@@ -86,7 +85,7 @@ tw-link:hover {
 /* Add a square border in the center of the page */
 #centerSquare {
   position: absolute;
-  top: 82%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the square */
   width: 250px; /* Square width */
@@ -94,37 +93,286 @@ tw-link:hover {
   border: 5px solid #00d4ff; /* Blue border */
   border-radius: 10px; /* Optional: Rounded corners for a more polished look */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Optional: Glowing effect */
+}
+
+window.changeBackground = function(color) {
+    document.querySelector("tw-story").style.background = color;
+};
+
+/* Style for images on the Main Page */
+.main-image {
+  position: absolute;
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  top: 100%;
+  transform: translateY(-50%);
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Positioning */
+.left {
+  left: 10%;
+}
+
+.right {
+  right: -70%;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main page" tags="" position="600,175" size="100,100">&lt;div class=&quot;topText&quot;&gt;Welcome to Hunt for (text-colour:magenta)[The Other Piece], a decision based game to find the second greatest treasure in the existence. Although it&#39;s not (text-colour:yellow)[One Piece], it&#39;s definetly worth searching for...&lt;/div&gt;
 &lt;div id=&quot;centerSquare&quot;&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
 (align:&quot;=&gt;&lt;=&quot;)[[Start]]
 (align:&quot;=&gt;&lt;=&quot;)[[Credits]]
 
+&lt;img src=&quot;pirate.jpg&quot; class=&quot;main-image left&quot;&gt;
+&lt;img src=&quot;hunter.jpg&quot; class=&quot;main-image left&quot;&gt; 
 
-</tw-passagedata><tw-passagedata pid="2" name="Startup Variables" tags="startup" position="275,100" size="100,100">(set: $pirateMoney to 100)
-(set: $tHMoney to 20)
-(set: $pirateIntelligence to 40)
-(set: $tHIntelligence to 100)
-(set: $pirateShipStrength to 100)
-(set: $tHShipStrength to 40)
-(set: $pirateCrewNumber to 6)
-(set: $tHCrewNumber to 12)
-
-(set: $name to &quot;&quot;)</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="575,325" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[
+</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="600,325" size="100,100">&#39;&#39;Pirate&#39;s Stats &#39;&#39; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#39;&#39;Treasure Hunter&#39;s Stats&#39;&#39;
+Money: 100&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Money: 20
+Intelligence: 40&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Intelligence: 100
+Ship Strength: 100&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Ship Strength: 40
+Crew Number: 6&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Crew Number: 12
+(set: $name to &quot;&quot;)
+(align:&quot;=&gt;&lt;=&quot;)[
 Type your name:  
 (input-box: bind $name, &quot;=======XXXXXX=======&quot;)]
 (align:&quot;=&gt;&lt;=&quot;)[
-Choose a [[pirate&#39;s path -&gt; Pirate]]  
+Choose a [[pirate&#39;s path -&gt;Pirate]]  
 Choose a [[Treasure Hunter&#39;s path -&gt;Treasure Hunter]]
 ]
-</tw-passagedata><tw-passagedata pid="4" name="Header" tags="header" position="150,100" size="100,100">(if: (passage:)&#39;s name is &quot;Start&quot;)[
-Pirate&#39;s Money: (print: $pirateMoney) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Treasure Hunter&#39;s Money: (print: $tHMoney)
-Pirate&#39;s Money: (print: $pirateIntelligence) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Treasure Hunter&#39;s Money: (print: $tHIntelligence)
-Pirate&#39;s Money: (print: $pirateShipStrength) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Treasure Hunter&#39;s Money: (print: $tHShipStrength)
-Pirate&#39;s Money: (print: $pirateCrewNumber) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  Treasure Hunter&#39;s Money: (print: $tHCrewNumber)]
-(if: (passage:)&#39;s name is &quot;Treasure Hunter&quot;)[
-Treasure Hunter&#39;s Money: (print: $tHMoney)]
+</tw-passagedata><tw-passagedata pid="3" name="Header" tags="header" position="150,100" size="100,100">(if: $role is &quot;Pirate&quot;)[
+**Pirate Stats:**  
+- Money: (print: $money)  
+- Intelligence: (print: $intelligence)  
+- Ship Strength: (print: $shipStrength)  
+- Crew Number: (print: $crewNumber)  
+]
+(if: $role is &quot;Treasure Hunter&quot;)[
+**Treasure Hunter Stats:**  
+- Money: (print: $money)  
+- Intelligence: (print: $intelligence)  
+- Ship Strength: (print: $shipStrength)  
+- Crew Number: (print: $crewNumber)  
+]
 
-</tw-passagedata><tw-passagedata pid="5" name=" Pirate" tags="" position="450,425" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Treasure Hunter" tags="" position="700,425" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Credits" tags="" position="750,175" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="4" name="Pirate" tags="" position="450,425" size="100,100">You are (print: $name). A rookie pirate who inherited his father&#39;s small ship with 6 crews under your command. Your father&#39;s men are doubful of your abilities as the commander of the ship. This is your first test to prove YOUR men your worth and fulfill your families&#39; pursuit of (text-colour:magenta)[The Other Piece].
+
+On your first scouting across The Gold Harbor, you spot a merchant ship off to the city of Jade. (text-style:&quot;shudder&quot;)[[Loot Merchant]]
+
+The crew and the ship were not the only things your father left you. He was quite an educated pirate with a shelf full of valuable books. You also spot some nautical charts that could lead you closer to (text-colour:magenta)[The Other Piece]. (text-style:&quot;Fade-In-Out&quot;)[[Study the books]]
+
+(set: $role to &quot;Pirate&quot;)
+(set: $money to 100)
+(set: $intelligence to 40)
+(set: $shipStrength to 3)
+(set: $crewNumber to 6)</tw-passagedata><tw-passagedata pid="5" name="Treasure Hunter" tags="" position="900,425" size="100,100">You are (print: $name). A former scholar who gave up on her studies of mathematics and physics because you always dreamed of sailing the endless seas and findong (text-colour:magenta)[The Other Piece]. You gather like-minded people from your school and recruit some experienced sailors as well and set off from The Gold Harbor to your adventure!
+
+You remember a ruin&#39;s location from your professor&#39;s old archives rumored to have great riches. This could be a good start to your adventure. [[Survey the ancient ruin -&gt;Survey Ruins]]
+
+A merchant from Copper Mountains is in desperate need of a ship to deliver his cargos on time. He didn&#39;t promise much money in exchange but his men who seem like decent will be join your search for the treasure. [[Deliver cargo -&gt;Cargo delivery]]
+
+
+(set: $role to &quot;Treasure Hunter&quot;)
+(set: $money to 20)
+(set: $intelligence to 100)
+(set: $shipStrength to 40)
+(set: $crewNumber to 12)</tw-passagedata><tw-passagedata pid="6" name="Credits" tags="" position="750,175" size="100,100">Ahmad Taha Khalili - All work done in Twine
+Credits to Dr. Anastasia Salter for the teachings</tw-passagedata><tw-passagedata pid="7" name="Loot Merchant" tags="" position="350,550" size="100,100">You successfully raid the merchant ship! This brings you more treasure, but you lost one of your men while boarding the ship.
+[[Continue your journey -&gt;Continue Pirate Journey]]
+
+(set: $money to $money + 50)
+(set: $crewNumber to $crewNumber - 1)
+</tw-passagedata><tw-passagedata pid="8" name="Continue Pirate Journey" tags="" position="450,675" size="100,100">Months after fruitless wondering, you are presented by two options:
+
+(link: &quot;Reveal&quot;)[
+The newly picked crew member from a rival pirate ship reveals that a considerable amount of his old captain&#39;s treasure is buried in an island not far. You could really use that extra money to recruit new sailors or upgrade your cannons. [[Seek out buried treasure -&gt;Seek Treasure]]
+
+You see two small merchant ships bearing the same sigil as the ship you encountered a while back. You know the riches will be plenty but also your men are quite apposed to dying. [[Loot the two merchant ships]]
+]</tw-passagedata><tw-passagedata pid="9" name="Study the books" tags="" position="575,550" size="100,100">You improve you knowledge of the seas and some survival skills. Now you understand why your father died of natrual causes unlike other pirate captains. He actually read somethings!
+[[Continue sailing-&gt;Continue Pirate Journey]]
+
+(set: $intelligence to $intelligence + 20)</tw-passagedata><tw-passagedata pid="10" name="Seek Treasure" tags="" position="325,800" size="100,100">You search for buried treasure on a deserted island. You dig deep into the sand, but suddenly you hear a hiss. 
+
+A deadly viper strikes! 
+
+(if: $intelligence &lt; 60)[
+You don’t recognize the snake’s venom. Within minutes, your vision blurs, and you collapse.  
+
+**You have died.**  
+
+[[The End]]
+]
+(else:)[
+Your knowledge of the wild saves you. You cut the wound and suck out the venom just in time.  
+(set: $intelligence to $intelligence + 20)
+[[Continue your journey -&gt;Continue Pirate Journey - 2]]
+]</tw-passagedata><tw-passagedata pid="11" name="Loot the two merchant ships" tags="" position="575,800" size="100,100">You successfully raid both the ships! This booty is plenty, but the toll on your men was very heavy. You also lost one of your most loyal men.
+[[Continue your journey -&gt;Continue Pirate Journey - 2]]
+
+(set: $money to $money + 150)
+(set: $crewNumber to $crewNumber - 3)</tw-passagedata><tw-passagedata pid="12" name="Continue Pirate Journey - 2" tags="" position="450,950" size="100,100">You stop by the Bay of Banished, a port city forsaken by its people, law, and even god. The city is now a haven for criminals, pirates, sell swords, and smugglers. Here the fit survive and the weak die, simple as that. Luckily your father, being an infamous brutal pirate, makes walking around the city easier by you simply carrying his banner and name. You know a shop owner who could renovate your ship and install some new cannons. This would be a big advantage compared to your rivals. There&#39;s also a pub nearby where you could recruit new crew for your ship.
+(link: &quot;Proceed&quot;)[
+(if: $money &gt; 200)[
+ [[Upgrade your ship: -$200 -&gt;Upgraded ship]]
+ 
+]
+ [[Recruit new men: -$100 -&gt;Recruit men]]
+]</tw-passagedata><tw-passagedata pid="13" name="Survey Ruins" tags="" position="1000,550" size="100,100">The old marks on the maps were right! You find a stash of gold and artifacts.[[Continue sailing-&gt;Continue Hunter Journey]]
+(set: $money to $money + 50)
+(set: $intelligence to $intelligence + 10)</tw-passagedata><tw-passagedata pid="14" name="Cargo delivery" tags="" position="775,550" size="100,100">You make the trader sign off the receipt. He doesn&#39;t look pleased that the cargo has arrived on time. [[Continue sailing-&gt;Continue Hunter Journey]]
+(set: $money to $money + 10)
+(set: $crewNumber to $crewNumber+5)
+</tw-passagedata><tw-passagedata pid="15" name="Continue Hunter Journey" tags="" position="900,675" size="100,100">After 2 long and exhausting weeks you are awaken by one of your men yelling &quot;Pirates!!, Pirates!!&quot;. You climb up to the deck and see the ugly skull flag attached on the ship&#39;s main topmast. You realize that the pirate&#39;s ship is much swifter than yours so as captain you&#39;re presented with two options:
+(Link: &quot;Reveal&quot;)[
+[[Face the ship head on and show them what you&#39;re made of -&gt;Fight back]]
+
+[[Surrender before it&#39;s too late and beg for their mercy -&gt;Surrender]]
+]</tw-passagedata><tw-passagedata pid="16" name="The End" tags="" position="175,350" size="100,100">Thank you for playing :) try other paths if you&#39;d like</tw-passagedata><tw-passagedata pid="17" name="Fight back" tags="" position="800,800" size="100,100">You turn the ship 180 degrees, facing the pirate&#39;s. Your men arm themselves with whatever they brought or could find on the deck. You give a rousing speech about how those pirate are nothing to fear of as you get closer to impact.
+
+(if: $crewNumber &lt; 17)[
+The skilled pirate captain moves his ship so swifty you don&#39;t have the time to react. Their ship is plunged head on to your ship&#39;s haul. Blood thirsty pirates swarm the deck and your men go down one by one. As you stand frozen while all your men go down, their captain shows a smirk on his face and plunges the head of his sword to your stomach.
+
+**You have died.**  
+
+[[The End]]
+]
+(else:)[
+Your men are all present on the deck, yelling and ready to take on the pirates. The sheer number of men present on your ship makes the pirate captain hesitate for a moment and eventually change course. No booty for them and a round of drink for your men tonight.
+[[Continue your journey -&gt;Continue Hunter Journey - 2]]
+]</tw-passagedata><tw-passagedata pid="18" name="Continue Hunter Journey - 2" tags="" position="925,950" size="100,100">You and your men make a stop at the port city of Roses. This is your chance to recuperate and continue your adventure. 
+
+
+You see a riddler on the streets boasting about his impossible riddles. He even bet gold on his riddles. If you can figure the riddles out, you&#39;d be rewarded handsomely. 
+(if: $intelligence &gt; 109)[
+You answer the riddles correctly and shock the entire crowd. You win a decent amount of gold too.]
+(else:)[
+The riddles were too confusing to you so just like other oblivious people on the crowd, you see as others struggle.]
+(link: &quot;Proceed&quot;)[
+You are offered 2 jobs to be a part of and you have to decide:
+
+Go with a band of self-proclaimed fishers to the edge of the Endless seas to try and hunt Purple orcas for a great amount of gold. [[Lets go hunting! -&gt;Orcas]]
+
+Accompany a royal convoy sent from the Empire of Sun to explore the ruins of the Old Empire and retrieve valuables. [[Lets go excavating -&gt;Royals]]
+]</tw-passagedata><tw-passagedata pid="19" name="Surrender" tags="" position="1025,800" size="100,100">Since you didn&#39;t give the pirates a hard time, they take what they want and throw some insults in the process. One of your men is also killed.
+(set: $money to $money - 20)
+(set: $shipStrength to $shipStrength - 40)
+(set: $crewNumber to $crewNumber - 1)
+[[Continue your journey -&gt;Continue Hunter Journey - 2]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="20" name="Upgraded ship" tags="" position="625,1075" size="100,100">You install new cannons, repair the old damaged parts, and paint the ship a new black shiny color. Your father would have been proud.
+
+(set: $money to $money - 200)
+(set: $shipStrength to $shipStrength + 1)
+
+[[Continue your adventrues -&gt;Treasure Hunter ship]]</tw-passagedata><tw-passagedata pid="21" name="Recruit men" tags="" position="325,1075" size="100,100">You meet the bartender. He directs you to just the right men for the job: hungry big men trying to make a fortune out in the seas. You have to be aware that as long as you feed them and promise them gold, they&#39;d follow you. You recruit them and start to head back to the ship
+
+(set: $crewNumber to $crewNumber + 6)
+(set: $money to $money - 100)
+
+[[Head back to the ship-&gt;Ambush]]</tw-passagedata><tw-passagedata pid="22" name="Ambush" tags="" position="325,1200" size="100,100">As you are getting closer to your ship, you cross a dark alley. And there they are. 10 men in front and 10 men behind you, armed and ready to kill. 
+(if: $intelligence &lt; 80)[ 
+You can&#39;t think of a way to get out of this situation but to fight. You have no gold in your pockets so they&#39;d cut your throat for wasting their time. You fight back and get stabbed the back.
+**You have died.**  
+
+[[The End]]
+]
+(else:)[
+You shout out loud to try to get the head man&#39;s attention. You say your name. $name, son of the infamous Golden beard and that if they are to ever harm them, the city would be ruins upon them (not really). After you say the name Golden beard, you see one by one the men start to walk away from the alley. You&#39;ve saved you and your men&#39;s life by two sentences.
+(set: $intelligence to $intelligence + 20)
+[[Continue your journey -&gt;Treasure Hunter ship]]
+]</tw-passagedata><tw-passagedata pid="23" name="Treasure Hunter ship" tags="" position="475,1250" size="100,100">You spot a single ship from far away and immediately realize that it&#39;s changing course to avoid you. You seize the opportunity and chase after them. Being the infamous Swift Death, your father&#39;s ship is among the fastest ships in the Endless seas. 
+
+As you get closer to the ship, you spot a deck (text-colour:red)[FULL] of men clearly outnumbering your men 4 to 1. This is your time to prove to your father what you&#39;re worth. 
+
+(link: &quot;decide&quot;)[
+Get closer, wait for the right opportunity to shoot off your cannons and order your men to board ship. [[Attack]]
+
+Change course right away. Make a run for it and don&#39;t look back at the men on the other ship shouting insults and celebrating on your cowardice. [[Flea]]
+]</tw-passagedata><tw-passagedata pid="24" name="Attack" tags="" position="600,1425" size="100,100">(text-style:&quot;shudder&quot;)[(text-colour:red)[BOOOOOOOOOOOOOOOOOOOOOOOOM!!!!
+
+BOOOOOOOOOOOOOOOOOOOOOOOOM!!!!!
+
+BOOOOOOOOOOOOOOOOOOOOOOOOM!!!!!!!!!!!]]
+
+The first round of cannons go off and your men hesitantly ready the planks to board the ship.
+(link: &quot;Wait...&quot;)[
+(link:&quot;They surrendered?&quot;)[
+
+Every man on the deck drops their weapon and hold their hands up, submitting to you and your small number of companions. It&#39;s a good day to be $name.]]
+(set: $crewNumber to $crewNumber + 10)
+(set: $money to $money + 100)
+(if: $intelligence &gt; 99)[
+While looting the book shelves inside the captain&#39;s room, you find a parchment with secret runes written on them. Since you have studied your father&#39;s old texts you recognize some letters. You run back to your ship and find the texts and are able to decypher it.
+(link: &quot;Could it be...&quot;)[
+The path to (text-colour:magenta)[The Other Piece] traced and its location indicated on the parchment. [[This must be the way!-&gt;The Other Piece]]]
+]
+(else:)[(link: &quot;You made it!&quot;)[
+As you&#39;ve made a good fortune from this courageous expedition and gained a good number of new crew, you feel fulfilled for this first time in your life. Achieving something greater, not overshadowed by your father. The thought of chasing (text-colour:magenta)[The Other Piece] slowly fades away as days go by and you continue your journey in the Endless seas as another great pirate.]]</tw-passagedata><tw-passagedata pid="25" name="Flea" tags="" position="350,1425" size="100,100">You flea the scene with your men. Out of nowhere, your men grab you by your shoulders and throw you (text-colour:red)[OFF] the ship. You dream of becoming a great pirate ends. 
+**You have died.**  
+
+[[The End]]</tw-passagedata><tw-passagedata pid="26" name="The Other Piece" tags="" position="600,1600" size="100,100">You track the lines day and night. Your men are exhausted but they are determined and fueled by their faith on you.
+
+Finally, after 30 days sailing your men spot an island with a cave entrance open to ships. 
+(link: &quot;You go inside&quot;)[
+As you enter, the etchings on the walls use the same runes you saw on the parchment. You say the runes out loud.
+
+(link: &quot;[BBBBBBBBBBBBBBOOOOOOOOOOOOOOOOOOSSSSSSSSSSSSSSHHHHHHHHHHHHHH]&quot;) [
+The cave opens an entrance, and for a moment, it seems as tough sun is rising right in front of your eyes. Mountains of (text-colour:yellow)[gold]] appear out of nowhere and your ship is overflowing with gold. This is the second-ultimate treasure every pirate dreams of discovering.
+
+[[The End]]
+]</tw-passagedata><tw-passagedata pid="27" name="Orcas" tags="" position="800,1075" size="100,100">These fishers look a lot different than the typical fishers from your city. Bald heads, tatted arms, growly attitude, and low-patience. It&#39;s almost as if they&#39;re waiting for the right moment to show their true colors. 
+
+So you are presented with an option: 
+
+Continue with the fishers to the edge of the Endless seas for some hunting [[Fish]]
+
+Wait for night time. And immediately change course and [[run away]].</tw-passagedata><tw-passagedata pid="28" name="Royals" tags="" position="1050,1075" size="100,100">As you explore the ruins of the Old Empire, you come across a strangly shaped building with book symbols etched on its doors. You search the building with your men
+
+(link: &#39;&quot;$name!!! Over Here!!&quot;&#39;)[
+One of your men has found a parchment with runes written all over it. Thankfully, you remember these runes from your studies of ancient languages. It&#39;s a track to (text-colour:magenta)[The Other Piece]. 
+You are now presented with two options:
+
+Give the parchment to the royals and try to find the (text-colour:magenta)[The Other Piece] together [[Cooperate]]
+
+Take the parchment, gather your men, board your ship, and run away as fast as you can to track the treasure [[Disband]]
+]</tw-passagedata><tw-passagedata pid="29" name="Fish" tags="" position="800,1200" size="100,100">This was a bad idea. (text-colour:red)[Pirates] in disguise. They throw your men one by one off your ship, grab your belongings and finally plung knife through your heart. You take your last breath on the deck of your own ship longing for great adventures. 
+**You have died.**  
+[[The End]]</tw-passagedata><tw-passagedata pid="30" name="run away" tags="" position="925,1200" size="100,100">You run away with what you have, your men and your ship. As you wonder endlessly in the Endless sea, you wonder if all the adventure you&#39;ve gone through had been worth it. You continue your search for a long time, but at the end, give up and return back to your city. 
+
+[[The End]]</tw-passagedata><tw-passagedata pid="31" name="Cooperate" tags="" position="1050,1200" size="100,100">The moment you tell the royals about the parchment and what it reads, they forcefully take it from you and immediately board their ships. They steal everything from your ship and set your ship ablaze. Many of your men die for protesting. 
+
+As you sit down hopelessly, watching your ship burn, you wish you were back in your city continuing your education. 
+
+You eventually starve to death with your left over men.
+
+**You have died.**  
+
+[[The End]]</tw-passagedata><tw-passagedata pid="32" name="Disband" tags="" position="1200,1200" size="100,100">You track the lines day and night. Your men are exhausted but they are determined and fueled by their faith on you.
+
+Finally, after 30 days sailing your men spot an island with a cave entrance open to ships. 
+(link: &quot;You go inside&quot;)[
+As you enter, the etchings on the walls use the same runes you saw on the parchment. You say the runes out loud.
+
+(link: &quot;[BBBBBBBBBBBBBBOOOOOOOOOOOOOOOOOOSSSSSSSSSSSSSSHHHHHHHHHHHHHH]&quot;) [
+The cave opens an entrance, and for a moment, it seems as tough sun is rising right in front of your eyes. Mountains of (text-colour:yellow)[gold]] appear out of nowhere and your ship is overflowing with gold. This is the second-ultimate treasure every pirate dreams of discovering.
+
+[[The End]]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
