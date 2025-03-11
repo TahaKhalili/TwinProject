@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 84, in script
+    jump dinningHall
+ScriptError: could not find label 'dinningHall'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 84, in script
+    jump dinningHall
+  File "/Users/ahmadtahakhalili/Desktop/renpy-8.3.4-sdk/renpy/ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Users/ahmadtahakhalili/Desktop/renpy-8.3.4-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'dinningHall'.
+
+macOS-13.5-arm64-arm-64bit arm64
+Ren'Py 8.3.4.24120703
+Nourse Triple 1.0
+Mon Mar 10 19:07:27 2025
